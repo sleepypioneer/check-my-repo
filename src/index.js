@@ -28,8 +28,7 @@ async function main() {
     per_page: 100,
   })
 
-  for (const d of data) {
-    const tmpDir = await createTempDirectory(d.name)
+    const tmpDir = "lalala"
     await git.clone("https://github.com/saucelabs/sauce-connect-action", tmpDir)
     const repolinterConnect = await repolinter.lint(tmpDir) /*execute repolinter default ruleset*/
     const print = await repolinter.jsonFormatter.formatOutput(repolinterConnect) /*JS Object return into json*/
@@ -42,7 +41,6 @@ async function main() {
       path.resolve(`./${organization}`, `${date}-${d.name}.json`),
       JSON.stringify(JSON.parse(print), null, 2)
     ) /*creates json file*/
-  }
 }
 
 // allows to be executed when not used as an imported file

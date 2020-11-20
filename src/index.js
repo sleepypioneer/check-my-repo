@@ -30,7 +30,7 @@ async function main() {
 
   for (const d of data) {
     const tmpDir = await createTempDirectory(d.name)
-    await git.clone(d.clone_url, tmpDir)
+    await git.clone("https://github.com/saucelabs/sauce-connect-action", tmpDir)
     const repolinterConnect = await repolinter.lint(tmpDir) /*execute repolinter default ruleset*/
     const print = await repolinter.jsonFormatter.formatOutput(repolinterConnect) /*JS Object return into json*/
 

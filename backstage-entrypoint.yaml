@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+    name: check-my-repo
+    description: Automatically check repositories health and quality and build reports that help us understand the current state of Sauce Labs repositories 
+    tags:
+      - ospo
+    links:
+      - url: https://opensource.saucelabs.com/check-my-repo/
+        title: Website
+        icon: web
+spec:
+    type: service
+    lifecycle: production
+    owner: opensource
+    system: ospo

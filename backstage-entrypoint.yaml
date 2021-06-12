@@ -5,6 +5,7 @@ metadata:
     description: Automatically check repositories health and quality and build reports that help us understand the current state of Sauce Labs repositories 
     annotations:
         github.com/project-slug: saucelabs/check-my-repo
+        backstage.io/techdocs-ref: url:https://github.com/saucelabs/check-my-repo/tree/backstage-integration        
     tags:
       - ospo
     links:
